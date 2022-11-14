@@ -70,3 +70,33 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+// Task 1
+
+function nameofPeopleInGryffindor( ){
+  let filteredArray = hogwarts.filter(
+    (person) => person.house === "Gryffindor"
+  );
+
+  [p1, p2, p3, p4, p5] = filteredArray
+  console.log(`${p2.firstName} ${p1.lastName}`)
+   console.log(`${p2.firstName} ${p2.lastName}`);
+    console.log(`${p3.firstName} ${p3.lastName}`);
+     console.log(`${p4.firstName} ${p4.lastName}`);
+      console.log(`${p5.firstName} ${p5.lastName}`);
+}
+
+nameofPeopleInGryffindor(hogwarts)
+
+// ## Task 2
+function whoHasPet (){
+hogwarts.forEach((person) => {
+  const { firstName, lastName, house, pet, occupation} = person
+   
+    if( pet != null && occupation === "Teacher"){
+      console.log(`${firstName}`)
+    }
+})
+
+
+}
+(whoHasPet())
